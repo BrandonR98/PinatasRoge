@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#galeria {
+    max-width: 70%;
+    height: 300px;
+    position: relative;
+    margin: auto;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+#galeria img {
+    width: 100%;
+    height: 294px;
+    vertical-align: middle;
+}
+
+
+.text {
+    color: #f2f2f2;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    background-color: #959595cc;
+    text-align: center;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    font-weight: bold;
+    background-color: #959595cc;
+    color: #f2f2f2;
+    font-size: 20px;
+}
+
+.next{
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }

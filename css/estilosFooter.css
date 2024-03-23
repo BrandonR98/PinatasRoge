@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+footer{
+    color: white;
+    background-color: rgb(33, 33, 33);
+}
+
+#footerIzq, #footerDer{
+    position: absolute;
+    width: 50%;
+    
+}
+
+#footerDer{    
+    right: 0;
+}
+
+#footerIzq h4{
+    font-size: 16px;
+}
+
+#footerIzq li, blockquote{
+    font-size: 14px;
+}
+
+#footerIzq li{
+    list-style-type: none;
+}
+
+#footerIzq blockquote{
+    text-align: justify;
+}

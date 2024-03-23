@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="css/estilos2.css">
+    <link rel="shortcut icon" href="img/istockphoto-847541332-612x612.ico" type="image/x-icon">
+    <title>Pi&ntilde;atas ROGELIO</title>
+</head>
+
+<body>
+
+    <div id="navbar">
+
+        <p style="font-family: 'Farsan', cursive;">Pi&ntilde;atas Roge</p>
+
+        <div id="navDerecha">
+            <ul>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Historia</a></li>
+                <li><a href="#">Elaboracion</a></li>
+                <li><a href="#">Acerca de nosotros</a></li>
+                <li><a href="#">Contactanos</a></li>
+
+            </ul>
+            <img src="img/pinata-holding-balloon-dog.png" alt="logoPiñata">
+        </div>
+    </div>
+    <br /><br/>
+    <div class="contenedor">
+        <div id="galeria">
+            <div class="imagen fade">
+                <img src="img/10299732.jpg" alt="imagen1">
+                <div class="text">Caption One</div>
+            </div>
+
+            <div class="imagen fade">
+                <img src="img/10022045.jpg" alt="imagen2">
+                <div class="text">Caption Two</div>
+            </div>
+
+            <div class="imagen fade">
+                <img src="img/10022048.jpg" alt="imagen3s">
+                <div class="text">Caption Three</div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+    </div>
+
+    <div class="contenedor">
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="contenedor footerC">
+        <div id="footerIzq">
+            <div id="contacto">
+                <h4>Contacto:</h4>
+                <ul>
+                    <li>Numero: 2291186481</li>
+                    <li>Correo: bran118@outlook.es</li>
+                    <li>Facebook: Brandon Rogerio</li>
+                </ul>
+            </div>
+
+            <div id="direccion">
+                <h4>Direccion:</h4>
+                <blockquote>
+                    Vulcano 72 entre Moctezuma y Zeus, Infonavit Buenavista, Veracruz, Veracruz, CP 91850.
+                </blockquote>
+            </div>
+        </div>
+        <div id="footerDer">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.797812143897!2d-96.17081892597537!3d19.204031382027107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c3443dfb5d0665%3A0x3fd4dacb99281020!2sHefestos%2047%2C%20Buenavista%2C%2091850%20Veracruz%2C%20Ver.!5e0!3m2!1ses-419!2smx!4v1710660349113!5m2!1ses-419!2smx"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("imagen");
+            let dots = document.getElementsByClassName("dot");
+
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length;
+            }
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+    </script>
+
+</body>
+
+</html>
